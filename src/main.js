@@ -3,10 +3,8 @@
 
 import Vue from 'vue'
 import App from './App'
-import Vuex from 'vuex'
 import store from './store'
-
-
+import router from './router'
 
 import '../static/base.css'
 import '../static/animate.css'
@@ -17,13 +15,11 @@ store.commit('increment')
 
 console.log(store.state.count) // -> 1
 
-
-
-
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
     template: '<App/>',
     components: { App },
-    store
+    store,
+    router
 })

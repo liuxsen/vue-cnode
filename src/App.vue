@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <c-header></c-header>
-    <content-head></content-head>
+    <left-bar></left-bar>
+    <content-box></content-box>
   </div>
 </template>
 
 <script>
-import cHeader from './components/header'
-import contentHead from './components/contentHead'
+import leftBar from './components/leftBar'
+import contentBox from './components/contentBox'
 
 export default {
   name: 'app',
   components: {
-    cHeader,contentHead
+    leftBar,contentBox
   }
 }
 </script>
