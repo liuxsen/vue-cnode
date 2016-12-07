@@ -7,13 +7,17 @@ const store = new Vuex.Store({
         count: 0,
         openBar: 0
     },
+    getters: {
+        count: state => state.count
+    },
     mutations: {
         increment(state) {
             state.count++
         },
         // 切换侧列表 bar
-        toggoleBar(openBar) {
-            state.openBar = openBar;
+        toggoleBar(state) {
+            console.log(state)
+            state.openBar = state.openBar === 0 ? 1 : 0;
         }
     }
 })

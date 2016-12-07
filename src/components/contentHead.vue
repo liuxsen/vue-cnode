@@ -21,13 +21,12 @@ export default {
   },
   methods:{
   	toggoleBar:function(){
-  		this.$store.commit('toggoleBar');
+  		this.$store.commit('increment')
   	}
   },
   computed:{
   	count(){
-  		console.log(this.$store.state.count);
-  		return this.$store.state.count;
+  		console.log(this.$store.getters.count);
   	}
   }
 };
