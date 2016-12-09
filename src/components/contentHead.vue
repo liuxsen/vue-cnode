@@ -1,5 +1,5 @@
 <template>
-	<div class='head' :class="{moveRight: openBar}">
+	<div class='head'>
 		<!-- icon -->
 		<div class="icon" @click="toggoleBar">icon</div>
 		<!-- 当前路由 -->
@@ -28,9 +28,6 @@ export default {
   	count(){
   		console.log(this.$store.getters.count);
   		return this.$store.getters.count;
-  	},
-  	openBar(){
-  		return this.$store.getters.openBar;
   	}
   }
 };
@@ -42,10 +39,6 @@ export default {
 		background: #333;
 		color: #fff;
 		font-size: 16px;
-		transition: all ease-in .5s;
-	}
-	.head.moveRight{
-		margin-left: 80%;
 	}
 	.head:after{
 		content: '';
